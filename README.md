@@ -55,8 +55,8 @@ with this plugin, but it hasn't been tested yet. Feedback is welcomed.
 
 #### Spigot and its derivatives
 
-[ProtocolLib](https://github.com/dmulloy2/ProtocolLib) is a required dependency.
-This plugin was developed using ProtocolLib v4.8.0; please try that version first if there are any errors. Check out [issue #3](https://github.com/HaHaWTH/HAProxy-Detector/issues/3) for experimental support for ProtocolLib 5.0.
+[ProtocolLib](https://www.spigotmc.org/resources/protocollib.1997/) is a required dependency.
+This plugin was developed using ProtocolLib 5.0.
 
 #### Paper
 
