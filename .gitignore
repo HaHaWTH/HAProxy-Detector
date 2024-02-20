@@ -1,24 +1,32 @@
-# Compiled class file
-*.class
+# Maven
+target/
+dependency-reduced-pom.xml
 
-# Log file
-*.log
+# Windows
+Thumbs.db
+[Dd]esktop.ini
+*.lnk
 
-# BlueJ files
-*.ctxt
+# macOS
+.DS_Store
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
+# VS Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+.history/
 
-# Package Files #
-*.jar
-*.war
-*.nar
-*.ear
-*.zip
-*.tar.gz
-*.rar
+# Eclipse JDT
+.settings/
+.metadata
+.project
+.classpath
+.factorypath
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
-replay_pid*
+# IDEA
+.idea/
+*.iml
+*.iws

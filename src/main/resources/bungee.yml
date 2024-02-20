@@ -1,0 +1,5 @@
+name: HAProxyDetector
+main: io.wdsj.haproxydetector.bungee.BungeeMain
+version: ${project.version}
+author: HaHaWTH
+softdepends: [BungeeProxy]
