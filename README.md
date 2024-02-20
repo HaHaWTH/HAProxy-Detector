@@ -6,6 +6,7 @@ This [BungeeCord](https://github.com/SpigotMC/BungeeCord/) (and now [Spigot](htt
 and [Velocity](https://papermc.io/software/velocity/)) plugin enables proxied and direct connections both at the same time. More
 information about [HAProxy](https://www.haproxy.org/) and its uses can be
 found [here](https://github.com/MinelinkNetwork/BungeeProxy/blob/master/README.md).
+
 **Originally made by Andylizi**
 
 ## Security Warning
@@ -70,12 +71,14 @@ Versions older than 3.0 are not supported.
 #### Java >= 9
 
 **No need to use this, ImagineBreaker has already wiped it**
+
 If errors like `NoClassDefFoundError: sun.misc.Unsafe`, `InaccessibleObjectException` and such are encountered,
 please add `--add-opens java.base/java.lang.invoke=ALL-UNNAMED` to JVM arguments.
 
 #### Java >= 18
 
 **No need to use this, ImagineBreaker has already wiped it**
+
 If errors like `IllegalAccessException: static final field has no write access` are encountered,
 please upgrade the plugin to at least v3.0.2.
 
