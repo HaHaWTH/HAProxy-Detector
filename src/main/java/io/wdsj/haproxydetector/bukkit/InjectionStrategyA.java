@@ -22,14 +22,14 @@ import java.lang.reflect.Field;
 import java.util.NoSuchElementException;
 import java.util.logging.Logger;
 
-public class InjectionStrategy1 implements InjectionStrategy {
+public class InjectionStrategyA implements IInjectionStrategy {
     private final Logger logger;
 
     private Field injectorFactoryField;
     private NetworkManagerInjector injector;
     private InjectionFactory oldFactory;
 
-    public InjectionStrategy1(Logger logger) {this.logger = logger;}
+    public InjectionStrategyA(Logger logger) {this.logger = logger;}
 
     @Override
     public void inject() throws ReflectiveOperationException {

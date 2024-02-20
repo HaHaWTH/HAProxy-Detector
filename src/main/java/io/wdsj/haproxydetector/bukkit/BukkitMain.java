@@ -25,7 +25,7 @@ import static io.wdsj.haproxydetector.ReflectionUtil.sneakyThrow;
 public final class BukkitMain extends JavaPlugin {
     static Logger logger;
 
-    private InjectionStrategy injectionStrategy;
+    private IInjectionStrategy injectionStrategy;
 
     @Override
     public void onLoad() {
@@ -95,12 +95,12 @@ public final class BukkitMain extends JavaPlugin {
 
     // Use separated methods to make sure the strategy classes won't be loaded
     // until they're actually used.
-    private static InjectionStrategy createInjectionStrategy1() throws ReflectiveOperationException {
-        return new InjectionStrategy1(logger);
+    private static IInjectionStrategy createInjectionStrategy1() throws ReflectiveOperationException {
+        return new InjectionStrategyA(logger);
     }
 
-    private static InjectionStrategy createInjectionStrategy2() throws ReflectiveOperationException {
-        return new InjectionStrategy2(logger);
+    private static IInjectionStrategy createInjectionStrategy2() throws ReflectiveOperationException {
+        return new InjectionStrategyB(logger);
     }
 
     @Override

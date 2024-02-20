@@ -12,14 +12,14 @@ import java.util.NoSuchElementException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class InjectionStrategy2 implements InjectionStrategy {
+public class InjectionStrategyB implements IInjectionStrategy {
     private final Logger logger;
 
     private Field handlerField;
     private ChannelInboundHandler injectorInitializer;
     private ChannelInboundHandler originalHandler;
 
-    public InjectionStrategy2(Logger logger) {this.logger = logger;}
+    public InjectionStrategyB(Logger logger) {this.logger = logger;}
 
     @Override
     public void inject() throws ReflectiveOperationException {
