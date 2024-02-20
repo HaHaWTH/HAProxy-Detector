@@ -17,6 +17,7 @@ import io.wdsj.haproxydetector.ReflectionUtil;
 import org.bukkit.Server;
 import org.bukkit.plugin.Plugin;
 import org.jetbrains.annotations.NotNull;
+import zone.rong.imaginebreaker.ImagineBreaker;
 
 import java.lang.reflect.Field;
 import java.util.NoSuchElementException;
@@ -37,7 +38,6 @@ public class InjectionStrategyA implements IInjectionStrategy {
             this.uninject();
         } catch (Throwable ignored) {
         }
-
         ProtocolManager pm = ProtocolLibrary.getProtocolManager();
         Field injectorField = FuzzyReflection.fromObject(pm, true)
                 .getFieldByType("nettyInjector", NetworkManagerInjector.class);
@@ -82,15 +82,13 @@ public class InjectionStrategyA implements IInjectionStrategy {
             return super.fromChannel(channel, listener, playerFactory);
         }
 
-        private static void inject(ChannelPipeline pipeline, ChannelHandler networkManager) {
-            synchronized (networkManager) {
-                HAProxyDetectorHandler detectorHandler = new HAProxyDetectorHandler(BukkitMain.logger,
-                        new HAProxyMessageHandler(networkManager));
-                try {
-                    pipeline.addAfter("timeout", "haproxy-detector", detectorHandler);
-                } catch (NoSuchElementException e) {
-                    pipeline.addFirst("haproxy-detector", detectorHandler);
-                }
+        private synchronized static void inject(ChannelPipeline pipeline, ChannelHandler networkManager) {
+            HAProxyDetectorHandler detectorHandler = new HAProxyDetectorHandler(BukkitMain.logger,
+                    new HAProxyMessageHandler(networkManager));
+            try {
+                pipeline.addAfter("timeout", "haproxy-detector", detectorHandler);
+            } catch (NoSuchElementException e) {
+                pipeline.addFirst("haproxy-detector", detectorHandler);
             }
         }
     }

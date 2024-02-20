@@ -26,6 +26,7 @@ import net.md_5.bungee.api.config.ListenerInfo;
 import net.md_5.bungee.api.plugin.Listener;
 import net.md_5.bungee.api.plugin.Plugin;
 import org.bstats.bungeecord.Metrics;
+import org.jetbrains.annotations.NotNull;
 import zone.rong.imaginebreaker.ImagineBreaker;
 
 public final class BungeeMain extends Plugin implements Listener {
@@ -144,7 +145,7 @@ public final class BungeeMain extends Plugin implements Listener {
         }
 
         @Override
-        protected Set<ChannelHandlerContext> delegate() {
+        protected @NotNull Set<ChannelHandlerContext> delegate() {
             return this.delegate;
         }
 
@@ -161,7 +162,7 @@ public final class BungeeMain extends Plugin implements Listener {
         }
 
         @Override
-        public boolean addAll(Collection<? extends ChannelHandlerContext> collection) {
+        public boolean addAll(@NotNull Collection<? extends ChannelHandlerContext> collection) {
             return standardAddAll(collection);
         }
 
