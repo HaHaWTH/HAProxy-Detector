@@ -6,6 +6,7 @@ This [BungeeCord](https://github.com/SpigotMC/BungeeCord/) (and now [Spigot](htt
 and [Velocity](https://papermc.io/software/velocity/)) plugin enables proxied and direct connections both at the same time. More
 information about [HAProxy](https://www.haproxy.org/) and its uses can be
 found [here](https://github.com/MinelinkNetwork/BungeeProxy/blob/master/README.md).
+**Originally made by Andylizi**
 
 ## Security Warning
 
